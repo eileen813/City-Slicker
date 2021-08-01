@@ -2,67 +2,100 @@
 
 ## Project Name
 
-[City Slicker] (https://github.com/eileen813/City-Slicker/)
+[City Slicker](https://github.com/eileen813/City-Slicker/)
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This final project will display city or country data demographics to a user such as timezone, income, population, quality of life, etc.
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+[Teleport Public APIs](https://developers.teleport.org/api/)
+
+{
+    "_links": {
+        "city:admin1_division": {
+            "href": "https://api.teleport.org/api/countries/iso_alpha2:US/admin1_divisions/geonames:CA/",
+            "name": "California"
+        },
+        "city:alternate-names": {
+            "href": "https://api.teleport.org/api/cities/geonameid:5391959/alternate_names/"
+        },
+        "city:country": {
+            "href": "https://api.teleport.org/api/countries/iso_alpha2:US/",
+            "name": "United States"
+        },
+        "city:timezone": {
+            "href": "https://api.teleport.org/api/timezones/iana:America%2FLos_Angeles/",
+            "name": "America/Los_Angeles"
+        },
+        "city:urban_area": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/",
+            "name": "San Francisco Bay Area"
+        },
+
+        "self": {
+            "href": "https://api.teleport.org/api/cities/geonameid:5391959/"
+        }
+    },
+    "full_name": "San Francisco, California, United States",
+    "geoname_id": 5391959,
+    "location": {
+        "geohash": "9q8yyk8yuv26emr0cctm",
+        "latlon": {
+            "latitude": 37.77493,
+            "longitude": -122.41942
+        }
+    },
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://miro.com/app/board/o9J_l4Mp7Jo=/
 
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Use the Teleport Public API for city specifics worldwide
+- Render city information on browser
+- Display other city data such as cost of living, income, quality of life, etc.
+- Remove previous city data with new search
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Add second API for weather
+- Add city image returned with city results
+- Add comparing city results
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 30| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|August 2| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|August 3| Pseudocode / actual code | Incomplete
-|August 4| Initial Clickable Model  | Incomplete
-|August 5| MVP | Incomplete
-|August 6| Presentations | Incomplete
+|July 30|  API Research | Complete
+|August 1| ReadME, Wireframe, & Priority Matrix | Complete
+|August 2| Project Approval, Structure, Pseudocode| Incomplete
+|August 3| JS Code Ensuring API Operating  | Incomplete
+|August 4| MVP Priorities, More Coding, Debugging | Incomplete
+|August 5| PMVP, Styling, & Debugging | Incomplete
+|August 6| Presentation Day *Woot Woot*! | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+https://miro.com/app/board/o9J_l4NcoYY=/
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| API Research | H | 4hrs| 3.5hrs | 3.5hrs |
+| Adding HTML Structure/Pseudocode | H | 1hrs| hrs | hrs |
+| Add Nav., Form, & Search Bar | H | 2hrs| hrs | hrs |
+| Appending City Data | H | 3hrs| hrs | hrs |
+| Append City Images | H | 3hrs| hrs | hrs |
+| Remove Previous Search Data | H | 1hrs| hrs | hrs |
+| Adding Flexbox & Media Query | H | 2hrs| hrs | hrs |
+| Style with CSS | H | 3hrs| hrs | hrs |
+| Final Touches/Debug | H | 5hrs| hrs | hrs |
+| Total | H | 30hrs| 3.5hrs | 3.5hrs |
 
 ## Code Snippet
 
