@@ -15,42 +15,145 @@ This final project will display city or country data demographics to a user such
 {
     "_links": {
         "city:admin1_division": {
-            "href": "https://api.teleport.org/api/countries/iso_alpha2:US/admin1_divisions/geonames:CA/",
-            "name": "California"
+            "href": "https://api.teleport.org/api/countries/iso_alpha2:US/admin1_divisions/geonames:FL/",
+            "name": "Florida"
         },
         "city:alternate-names": {
-            "href": "https://api.teleport.org/api/cities/geonameid:5391959/alternate_names/"
+            "href": "https://api.teleport.org/api/cities/geonameid:4174757/alternate_names/"
         },
         "city:country": {
             "href": "https://api.teleport.org/api/countries/iso_alpha2:US/",
             "name": "United States"
         },
         "city:timezone": {
-            "href": "https://api.teleport.org/api/timezones/iana:America%2FLos_Angeles/",
-            "name": "America/Los_Angeles"
+            "href": "https://api.teleport.org/api/timezones/iana:America%2FNew_York/",
+            "name": "America/New_York"
         },
         "city:urban_area": {
-            "href": "https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/",
-            "name": "San Francisco Bay Area"
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/",
+            "name": "Tampa Bay Area"
         },
-
+        
         "self": {
-            "href": "https://api.teleport.org/api/cities/geonameid:5391959/"
+            "href": "https://api.teleport.org/api/cities/geonameid:4174757/"
         }
     },
-    "full_name": "San Francisco, California, United States",
-    "geoname_id": 5391959,
+    "full_name": "Tampa, Florida, United States",
+    "geoname_id": 4174757,
     "location": {
-        "geohash": "9q8yyk8yuv26emr0cctm",
+        "geohash": "dhvqgxew5764t9bp4b6j",
         "latlon": {
-            "latitude": 37.77493,
-            "longitude": -122.41942
+            "latitude": 27.94752,
+            "longitude": -82.45843
         }
     },
+    "name": "Tampa",
+    "population": 369075
+}
+
+{
+    "_links": {
+        "curies": [
+            {
+                "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+                "name": "location",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+                "name": "city",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+                "name": "ua",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+                "name": "country",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+                "name": "a1",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+                "name": "tz",
+                "templated": true
+            }
+        ],
+        "self": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/"
+        },
+        "ua:admin1-divisions": [
+            {
+                "href": "https://api.teleport.org/api/countries/iso_alpha2:US/admin1_divisions/geonames:FL/",
+                "name": "Florida"
+            }
+        ],
+        "ua:cities": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/cities/"
+        },
+        "ua:continent": {
+            "href": "https://api.teleport.org/api/continents/geonames:NA/",
+            "name": "North America"
+        },
+        "ua:countries": [
+            {
+                "href": "https://api.teleport.org/api/countries/iso_alpha2:US/",
+                "name": "United States"
+            }
+        ],
+        "ua:details": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/details/"
+        },
+        "ua:identifying-city": {
+            "href": "https://api.teleport.org/api/cities/geonameid:4174757/",
+            "name": "Tampa"
+        },
+        "ua:images": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/images/"
+        },
+        "ua:primary-cities": [
+            {
+                "href": "https://api.teleport.org/api/cities/geonameid:4174757/",
+                "name": "Tampa"
+            },
+            {
+                "href": "https://api.teleport.org/api/cities/geonameid:4171563/",
+                "name": "St. Petersburg"
+            }
+        ],
+        "ua:salaries": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/salaries/"
+        },
+        "ua:scores": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/scores/"
+        }
+    },
+    "bounding_box": {
+        "latlon": {
+            "east": -81.8317,
+            "north": 28.517,
+            "south": 26.8927,
+            "west": -82.8864
+        }
+    },
+    "continent": "North America",
+    "full_name": "Tampa Bay Area, Florida",
+    "is_government_partner": false,
+    "name": "Tampa Bay Area",
+    "slug": "tampa-bay-area",
+    "teleport_city_url": "https://teleport.org/cities/tampa-bay-area/",
+    "ua_id": "dhvqg"
+}
 
 ## Wireframes
 
-https://miro.com/app/board/o9J_l4Mp7Jo=/
+![Wireframe](https://github.com/eileen813/City-Slicker/blob/main/Website%20Wireframing.jpg?raw=true)
 
 
 #### MVP 
@@ -80,7 +183,7 @@ https://miro.com/app/board/o9J_l4Mp7Jo=/
 
 ## Priority Matrix
 
-https://miro.com/app/board/o9J_l4NcoYY=/
+![Matrix](https://github.com/eileen813/City-Slicker/blob/main/2%C3%972%20Prioritization%20Matrix.jpg?raw=true)
 
 ## Timeframes
 
@@ -108,4 +211,4 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ Use this section to document what changes were made and the reasoning behind those changes.
