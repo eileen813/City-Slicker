@@ -1,11 +1,19 @@
-// const DOMAIN = `https://api.teleport.org/api/`
+const DOMAIN = `https://api.teleport.org/api/cities/`;
+const submitButton = document.querySelector("#get-city")
 
-async function fetchData() {
+
+async function getData() {
   try {
-      const url = `https://api.teleport.org/api/cities/{?search}`
-      const response = await fetch.get(url)
-        console.log(response)
-      } catch (error) {
-        console.error(error)
+    const findCity = document.querySelector("#city-search").value
+      // console.log(findCity)
+    const response = await axios.get(`${DOMAIN}?search=${findCity}`)
+      console.log(response.data)
+  } catch (error) {
+      console.error(error)
+  }
 }
-}
+
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault()
+  getData()
+})
