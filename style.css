@@ -1,4 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  display: inline-flexbox;
   background-color: lightblue;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  
+}
+
+#city-data {
+  display: flex;
+  border: groove 5px;
+  font-size: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+#get-city:hover {
+  background-color: orange;
+  color: black;
+  transition: all 0.25s ease;
+}
+
+h1 {
+  display:inline;
+  border-radius: 25% 10%;
+  font-size: 50px;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+h2 {
+  font-family: 'Lemonada', cursive;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media screen and (max-width:  1025px) {
+  main {
+    flex-direction: column;
+  }
 }
