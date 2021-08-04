@@ -8,13 +8,13 @@ async function getData(cityName) {
   removeElement(cityList)
   try {
     const cityDetails = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/details/`)
-    const cityScores = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`)
+    // const cityScores = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`)
     buildElements(cityDetails.data.categories)
-    buildElements(cityScores.data)
-    console.log(cityScores)
+    // buildElements(cityScores.data)
+    // console.log(cityScores)
     return cityDetails
-    return cityScores
   } catch (error) {
+    document.querySelector('#city-data').textContent = "City not found.  Try searching the urban area i.e. 'Tampa Bay Area'."
     console.error(error)
   }
 }
@@ -57,9 +57,9 @@ console.log("Build Elements", cityData)
   cityStartupSal.textContent = `Average startup salary in USD is ${cityData[10].data[6].currency_dollar_value}`
   cityDiv.append(cityStartupSal)
 
-  const citySum = document.createElement("p")
-  citySum.textContent = `Summary:${cityData.summary}`
-  cityDiv.append(citySum)
+  // const citySum = document.createElement("p")
+  // citySum.textContent = `Summary:${cityData.summary}`
+  // cityDiv.append(citySum)
 
 
   // let cityElements = `

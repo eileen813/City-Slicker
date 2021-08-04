@@ -11,21 +11,25 @@ body {
 }
 
 #city-data {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(85, 85, 5);
   font-weight: bolder;
   font-size: 20px;
-  justify-content: center;
   padding: 20px;
 }
 
 #get-city {
   background-color: white;
   color: black;
+  font-size: medium;
   padding: 12px 15px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: wait;
+  text-shadow: 1px 1px 1px rgba(87, 133, 251, 0.941),
+              2px 2px 1px rgba(87, 133, 251, 0.941);
 }
 
 #get-city:hover {
@@ -35,13 +39,14 @@ body {
 }
 
 h1 {
-  display:inline;
   background-color: white;
   border-radius: 50% 20% / 10% 40%;
   font-size: 50px;
   font-family: 'Sansita Swashed', cursive;
   margin: 70px;
-  padding: 18px;
+  padding: 10px;
+  text-shadow: 1px 1px 1px red,
+               2px 2px 1px red;
 }
 
 h2 {
@@ -60,8 +65,19 @@ img {
   max-width: 100%;
 }
 
-@media screen and (max-width:  1025px) {
-  main {
+@media all and (min-width: 480px) and (max-width: 767px) {
+  h1 {
     flex-direction: column;
+    background-color: rgba(87, 133, 251, 0.941);
+}
+  h2,
+  h3 {
+    color: rgb(87, 133, 251, 0.941);
   }
 }
+
+/* @media screen and (max-width:  1025px) {
+  h1 {
+    flex-direction: column;
+    background-color: red;
+  }
