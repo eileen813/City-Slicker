@@ -8,8 +8,12 @@ async function getData(cityName) {
   removeElement(cityList)
   try {
     const cityDetails = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/details/`)
+    const cityScores = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`)
     buildElements(cityDetails.data.categories)
+    buildElements(cityScores.data)
+    console.log(cityScores)
     return cityDetails
+    return cityScores
   } catch (error) {
     console.error(error)
   }
@@ -52,6 +56,10 @@ const cityDiv = document.createElement("div")
   const cityStartupSal = document.createElement("p")
   cityStartupSal.textContent = `Average startup salary in USD is ${cityData[10].data[6].currency_dollar_value}`
   cityDiv.append(cityStartupSal)
+
+  const citySum = document.createElement("p")
+  citySum.textContent = `Summary:${cityData.summary}`
+  cityDiv.append(citySum)
 
 
   // let cityElements = `
