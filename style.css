@@ -11,32 +11,49 @@ body {
 }
 
 #city-data {
-  display: flex;
-  border: groove 5px;
+  display: inline-block;
+  color: rgb(85, 85, 5);
+  font-weight: bolder;
   font-size: 20px;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
+}
+
+#get-city {
+  background-color: white;
+  color: black;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #get-city:hover {
-  background-color: orange;
-  color: black;
+  background-color: goldenrod;
+  color: rgb(85, 85, 5);
   transition: all 0.25s ease;
 }
 
 h1 {
   display:inline;
-  border-radius: 25% 10%;
+  background-color: white;
+  border-radius: 50% 20% / 10% 40%;
   font-size: 50px;
   font-family: 'Sansita Swashed', cursive;
+  margin: 70px;
+  padding: 18px;
 }
 
 h2 {
   font-family: 'Lemonada', cursive;
+  margin: 30px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 25px;
+  font-family: 'Lemonada', cursive;
+  margin: 20px;
+  padding: 2px;
 }
 
 img {

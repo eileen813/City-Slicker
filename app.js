@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
 
 function buildElements(cityData) {
 console.log("Build Elements", cityData)
-const cityDiv = document.createElement("div")
+  const cityDiv = document.createElement("div")
   cityList.append(cityDiv)
 
   const cityPop = document.createElement("p")
