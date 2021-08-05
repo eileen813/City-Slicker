@@ -237,26 +237,34 @@ This final project will display city or country data demographics to a user such
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| API Research | H | 4hrs| 3.5hrs | 3.5hrs |
-| Adding HTML Structure/Pseudocode | H | 1hrs| hrs | hrs |
-| Add Nav., Form, & Search Bar | H | 2hrs| hrs | hrs |
-| Appending City Data | H | 3hrs| hrs | hrs |
-| Append City Images | H | 3hrs| hrs | hrs |
-| Remove Previous Search Data | H | 1hrs| hrs | hrs |
-| Adding Flexbox & Media Query | H | 2hrs| hrs | hrs |
-| Style with CSS | H | 3hrs| hrs | hrs |
-| Final Touches/Debug | H | 5hrs| hrs | hrs |
-| Total | H | 30hrs| 3.5hrs | 3.5hrs |
+| API Research | H | 4 hrs| 3.5 hrs | 3.5 hrs |
+| Adding HTML Structure/Pseudocode | H | 1 hr| 1 hr | 1 hr |
+| Add Nav., Form, & Search Bar | H | 1 hr| 1 hr | 1 hr |
+| Appending City Data | H | 3 hrs| 3 hrs | 3 hrs |
+| Append City Images | H | 1 hr| 1 hr | 1 hr |
+| Remove Previous Search Data | H | 1 hr| 1 hr | 30 min |
+| Adding Flexbox & Media Query | H | 2 hrs| 1 hr | 1 hr |
+| Style with CSS | H | 2 hrs| 2 hrs | 2 hrs |
+| Final Touches/Debug | H | 3.5 hrs| 2 hrs | 2 hrs |
+| Total | H | 18.5 hrs| 19 hrs | 15 hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+I am proud of the code below as I found my API a little difficult to sort through its multitude of arrays to choose specific data.  Just getting started on the code below helped the rest of my project flow smoothly:
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function buildElements(cityDetails) {
+  const cityDiv = document.createElement("div")
+  cityList.append(cityDiv)
+
+  const cityPop = document.createElement("p")
+  cityPop.textContent = `Urban area population in millions is ${cityDetails[1].data[0].float_value}`
+  cityDiv.append(cityPop)
+
+  return cityDetails
 }
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+
+I did not include a navigation bar.  Since I did not have a second API, I did not believe the navigation bar was needed at the time.
