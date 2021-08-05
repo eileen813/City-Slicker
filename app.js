@@ -9,9 +9,11 @@ async function getData(cityName) {
   try {
     const cityDetails = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/details/`)
     const cityScores = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`)
-    const cityImages = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/images/`)
-    // console.log(cityScores.data)
-    console.log(cityImages)
+    // const cityTime = await axios.get (`https://api.teleport.org/api/timezones/iana:America${cityName}/offsets/`)
+    // const cityImages = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${cityName}/images/`)
+    console.log(cityScores.data)
+    // console.log(cityImages)
+    // console.log(cityTime)
     buildElements(cityDetails.data.categories, cityScores.data)
     return cityDetails
 
@@ -30,8 +32,8 @@ form.addEventListener('submit', (e) => {
   getData(sanitizeData)
 })
 
-function buildElements(cityDetails, cityScores, cityImages) {
-console.log("Build Elements", cityDetails)
+function buildElements(cityDetails, cityScores) {
+// console.log("Build Elements", cityDetails)
   const cityDiv = document.createElement("div")
   cityList.append(cityDiv)
 
@@ -65,11 +67,14 @@ console.log("Build Elements", cityDetails)
   // console.log(cityScores.summary.replace(/['"]+/g, ''))
   cityDiv.append(citySum)
 
+  // const cityTz = document.createElement("p")
+  // cityTz.textContent = `${cityTime.data.data._links["tz:offsets-now"].href}`
+  // cityDiv.append(cityTz)
+
   // const cityImg = document.createElement("img")
-  // cityImg.src = cityImages.data.config.url
-  // cityDiv.append(cityImg)
-
-
+  // img.src = `${cityImages.data.config.url}`
+  // let src = document.getElementById(`city-search`)
+  // src.appendChild(cityImg)
 
   // let cityElements = `
   // <p>${data}(categories[1].data[0].float_value.Population)population</p>
@@ -84,6 +89,12 @@ console.log("Build Elements", cityDetails)
   // })
   return cityDetails
 }
+
+// function cityImg() {
+//   let img = document.createElement(`img`)
+//   img.src = `https://api.teleport.org/api/urban_areas/slug:${cityName}/images/`
+//   document.getElementById(.city-data).appendChild(img)
+// }
 
 function removeElement(element) {
   while (element.lastChild) {

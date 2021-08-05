@@ -10,6 +10,13 @@ body {
   
 }
 
+.balloon{
+  float: right;
+  padding-top: 38px;
+  padding-right: 20px;
+  max-width: 40%;
+}
+
 #city-data {
   display: flex;
   align-items: center;
@@ -75,9 +82,3 @@ img {
     color: rgb(87, 133, 251, 0.941);
   }
 }
-
-/* @media screen and (max-width:  1025px) {
-  h1 {
-    flex-direction: column;
-    background-color: red;
-  }
