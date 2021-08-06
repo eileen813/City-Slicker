@@ -2,7 +2,7 @@
 
 ## Project Name
 
-[City Slicker](https://github.com/eileen813/City-Slicker/)
+[City Slicker](https://eileen813.github.io/City-Slicker/)
 
 ## Project Description
 
