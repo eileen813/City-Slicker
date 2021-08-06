@@ -23,7 +23,6 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#city-search').value
   let sanitizeData = inputValue.trim().replaceAll(" ", '-').toLowerCase()
-  console.log(sanitizeData)
   getData(sanitizeData)
 })
 
